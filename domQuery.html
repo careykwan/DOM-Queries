@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document dom queries</title>
+	<style>
+
+	.myStyle {
+
+	width: 300px;
+    height: 100px;
+    background-color: coral;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+	}
+	</style>
+</head>
+<body>
+
+<h1 id="heading">D.O.M Query</h1>
+
+<h2 id="head">This is my seconding heading</h2>
+
+<ul>
+	<li class="pie">apple pie</li>
+	<li class="pie">strudel pie</li>
+	<li class="pie">xmas mince pie</li>
+</ul>
+	
+<p id="panda" class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti consectetur sit quis nihil repellat cumque asperiores at magni, deserunt, doloribus culpa eligendi, aperiam ab voluptatibus provident natus nemo recusandae excepturi.</p>
+
+<p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ipsam consequuntur ducimus. Sequi porro, officiis similique quas. Tempora molestias culpa dignissimos, cum. Voluptates aliquam harum similique, vitae dignissimos sapiente mollitia.</p>
+
+
+
+	<script>
+		//This is the start of an Iiffe, it wraps up the functions
+		(function(){
+		//This is the first function and the function name
+		function myFunctionA(){
+			//This is accessing the dom by the element in html
+			var topHeading = document.getElementById("heading");
+			//This is adjusting the css with js
+			topHeading.style.fontSize = "80px";
+		}
+		
+		//This is invoking the function
+		myFunctionA();
+		//This is the second function
+		function myFunctionB(){
+			var list = document.getElementsByTagName("UL")[0];
+			list.style.backgroundColor = "pink";
+		}
+		
+		myFunctionB();
+		//This is the third function
+		function myFunctionC(){
+			var para = document.getElementById("panda");
+			para.style.fontFamily = "Verdana";
+
+		}
+
+		myFunctionC();
+ 		})();
+ 		//This is the end of the Iiffe
+	</script>
+</body>
+</html>
