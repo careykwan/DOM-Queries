@@ -33,6 +33,8 @@
 
 <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ipsam consequuntur ducimus. Sequi porro, officiis similique quas. Tempora molestias culpa dignissimos, cum. Voluptates aliquam harum similique, vitae dignissimos sapiente mollitia.</p>
 
+<p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ipsam consequuntur ducimus. Sequi porro, officiis similique quas. Tempora molestias culpa dignissimos, cum. Voluptates aliquam harum similique, vitae dignissimos sapiente mollitia.</p>
+
 
 
 	<script>
@@ -44,21 +46,24 @@
 			var topHeading = document.getElementById("heading");
 			//This is adjusting the css with js
 			topHeading.style.fontSize = "80px";
+			topHeading.style.color = "orange";
+			topHeading.style.backgroundColor = "blue";
 		}
 		
 		//This is invoking the function
 		myFunctionA();
 		//This is the second function
 		function myFunctionB(){
-			var list = document.getElementsByTagName("UL")[0];
-			list.style.backgroundColor = "pink";
+			var list = document.getElementsByTagName("ul");
+			list[0].style.backgroundColor = "pink";
 		}
 		
 		myFunctionB();
 		//This is the third function
 		function myFunctionC(){
-			var para = document.getElementById("panda");
-			para.style.fontFamily = "Verdana";
+			var para = document.getElementsByClassName("lorem");
+			para[0].style.fontFamily = "Verdana";
+			para[1].style.fontFamily = "Verdana";
 
 		}
 
